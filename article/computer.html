@@ -5,12 +5,12 @@
 {% include header.html %}
 
 	<section>
-		<span class="image fit main" style="height:150px;opacity:0.2;"><img src="//assets/images/introduction/introduction4.jpg" alt="" />
-		</span>
-
+		<div class="image fit main" style="padding:150px 0;height:450px;background-image:url(/assets/images/home-bg.jpg)">
 			<header class="major">
 				<h2>计算机相关</h2>
 			</header>
+		</div>
+
 		<div class="content">
       {% for category in site.categories %}
           {% if category.first ==  'computer' %}
