@@ -1,0 +1,21 @@
+---
+
+---
+
+{% include header.html %}
+
+	<section>
+		<span class="image fit main" style="height:150px;opacity:0.2;"><img src="//assets/images/introduction/introduction4.jpg" alt="" />
+		</span>
+
+			<header class="major">
+				<h2>全部文章</h2>
+			</header>
+		<div class="content">
+      {% for post in site.posts %}
+          {% include articleitem.html %}
+      {% endfor %}
+		</div>
+	</section>
+
+{% include footer.html %}

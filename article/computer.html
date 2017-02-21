@@ -1,0 +1,25 @@
+---
+
+---
+
+{% include header.html %}
+
+	<section>
+		<span class="image fit main" style="height:150px;opacity:0.2;"><img src="//assets/images/introduction/introduction4.jpg" alt="" />
+		</span>
+
+			<header class="major">
+				<h2>计算机相关</h2>
+			</header>
+		<div class="content">
+      {% for category in site.categories %}
+          {% if category.first ==  'computer' %}
+              {% for post in category.last %}
+                {% include articleitem.html %}
+              {% endfor %}
+          {% endif %}
+      {% endfor %}
+		</div>
+	</section>
+
+{% include footer.html %}
