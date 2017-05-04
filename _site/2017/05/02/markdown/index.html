@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="多写多记，总归是好的">
+    <meta name="keywords"  content="hxl | moting | 墨葶 | 何晓莉 | hexiaoli">
+    <meta name="theme-color" content="#000000">
+
+    <title>Markdown 初探 - Lilya Blog</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/2017/05/02/markdown/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Timeline CSS -->
+    <link rel="stylesheet" href="/css/timeline.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Lilya Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="lilya_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">关于</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">标签</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#lilya_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var LilyaNav = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            LilyaNav.close()
+        }else{
+            LilyaNav.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from
+     * $toggle/$collapse will break global delegation.
+     *
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        LilyaNav.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/postPic/learn-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/postPic/learn-bg.jpg')
+    }
+
+    
+</style>
+<header class="intro-header" >
+    <div class="header-mask"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#markdown" title="markdown">markdown</a>
+                        
+                    </div>
+                    <h1>Markdown 初探</h1>
+                    
+                    
+                    <h2 class="subheading"> "Markdown Get,都说好用，我也试试"</h2>
+                    
+                    <span class="meta">Posted by Lilya on May 2, 2017</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<blockquote>
+  <p>Learning any language takes a lot of time, but don’t give up. <br />学习任何语言都是需要花费很多时间，但不要放弃。</p>
+</blockquote>
+
+<h2 id="what">What</h2>
+
+<p><a href="#how">直接使用markdown</a></p>
+
+<blockquote>
+  <p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— <a href="https://zh.wikipedia.org/wiki/Markdown">维基百科</a></p>
+</blockquote>
+
+<p><strong>Markdown</strong> 是一种标记<code class="highlighter-rouge">语言</code>，也可以说是一个文本编辑<code class="highlighter-rouge">工具</code>。<code class="highlighter-rouge">语言</code>方面类似 HTML 等其他编程语言，有自身的语法规则，轻量、简单、单易上手；说它是<code class="highlighter-rouge">工具</code>，因为其类似　Word，支持文本排版及字体设置，可读、直观、纯文本。</p>
+
+<p>不管是学习还是工作，一直在和软件打交道，平时爱写爱记，都放在自己硬盘上，作为程序猿，早该用 Markdown，却一直拖到现在。2016年以前，对于 Markdown，只闻其名，未见其身。实习期间有些文档需要编写，公司同一文档管理需要使用 Markdown，这才拨开迷雾，看了看它的真面目。</p>
+
+<hr />
+
+<h2 id="why">Why</h2>
+
+<p>为何选用 Markdown ？理由无非两个，学习工作需要，或者是个人偏好。我要用它，原因是简单、好用、适用面广。何以见得？</p>
+
+<ul>
+  <li><strong>语法简单，标记量少</strong><br />
+Markdown 的语法十分简单，常用的标记符号也不超过十个，学习成本很低。一旦熟练，排版上可节省至少70%的时间，让你全身心投入码字。</li>
+  <li><strong>无缝切换，随意组合</strong><br />
+Markdown 支持多种导出格式，你想发布网站，可以导出 HTML，你想修饰简历，可以导成 PDF 格式；另外 Markdown 中还可嵌入 HTML 标签。</li>
+  <li><strong>大家都用，迎合大众</strong><br />
+“Learn once, write 很多 where”。目前来看，支持 Markdown 语法的编辑器及网站有很多，光是markdown编辑器就多达78款，详见<a href="http://www.jianshu.com/p/5f414ddd79cf">Markdown 工具</a>，比如<a href="https://maxiang.io/">Evernote</a>，<a href="http://www.jianshu.com/">简书</a>。</li>
+</ul>
+
+<hr />
+
+<p id="how"></p>
+<h2 id="how">How</h2>
+<p>Markdown 语法很简单，标记也不是很多，想系统了解可以直接去<a href="http://daringfireball.net/">官网</a>。这里只介绍常用标记的简单用法及示例。</p>
+
+<h4 id="标题">标题</h4>
+<p>标题是最常用的标记。类似 HTML 中的h1，h2，Markdown 中使用<code class="highlighter-rouge">#</code>来表示标题。示例如下：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code># 标题１
+## 标题２
+### 标题３
+#### 标题４
+</code></pre>
+</div>
+<p>最终显示如下：</p>
+
+<p><img src="/img/postPic/title-markdown.jpg" alt="标题示例" /></p>
+
+<h4 id="代码块">代码块</h4>
+<p>文本中添加代码，比如<code class="highlighter-rouge">`代码内容`</code>，若是单独添加代码快，示例如下：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>  ``` java 开始
+  /**
+   * 注释
+   */
+  public class Main {
+      public static void main(String[] args) {
+        int val = 80;
+        ...   
+      }
+  }
+  ``` 结束
+</code></pre>
+</div>
+<blockquote>
+  <p><strong>tips</strong>:实际编写中删除<code class="highlighter-rouge">开始</code>和<code class="highlighter-rouge">结束</code></p>
+</blockquote>
+
+<p>最终页面显示如下：</p>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="cm">/**
+ * 注释
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+      <span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="mi">80</span><span class="o">;</span>
+      <span class="o">...</span>    
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<h4 id="列表">列表</h4>
+<p>在文字前添加<code class="highlighter-rouge">*</code>,<code class="highlighter-rouge">+</code>和<code class="highlighter-rouge">-</code>表示无序列表，使用<code class="highlighter-rouge">1. 2.</code>则表示有序列表，注意符号要和文字之间加上一个字符的空格。<br />
+无序列表<code class="highlighter-rouge">*</code>示例：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>* red
+* green
+* black
+等同于
++ red
++ green
++ black
+等同于
+- red
+- green
+- black
+</code></pre>
+</div>
+<p>最终显示如下：</p>
+<ul>
+  <li>red</li>
+  <li>green</li>
+  <li>black</li>
+</ul>
+
+<p>有序列表<code class="highlighter-rouge">1.</code>示例：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>1. red
+2. green
+3. black
+</code></pre>
+</div>
+<p>最终显示如下：</p>
+<ol>
+  <li>red</li>
+  <li>green</li>
+  <li>black</li>
+</ol>
+
+<h4 id="表格">表格</h4>
+<p>表格示例如下：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+| Item      |    Value | Qty  |
+| :-------- | --------:| :--: |  
+| Computer  | 1600 USD |  5   |
+| Phone     |   12 USD |  12  |
+| Pipe      |    1 USD | 234  |
+</code></pre>
+</div>
+<blockquote>
+  <p><strong>tips</strong>:<br />1.第二行中的<code class="highlighter-rouge">:</code>表示对齐方式</p>
+  <ul>
+    <li>居左：<code class="highlighter-rouge">:--------</code></li>
+    <li>居中：<code class="highlighter-rouge">:-------:</code>或<code class="highlighter-rouge">--------</code></li>
+    <li>居右：<code class="highlighter-rouge">-------:</code></li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>2.使用表格时，上方需要有空行。</p>
+</blockquote>
+
+<p>最终显示如下：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Item</th>
+      <th style="text-align: right">Value</th>
+      <th style="text-align: center">Qty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Computer</td>
+      <td style="text-align: right">1600 USD</td>
+      <td style="text-align: center">5</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Phone</td>
+      <td style="text-align: right">12 USD</td>
+      <td style="text-align: center">12</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Pipe</td>
+      <td style="text-align: right">1 USD</td>
+      <td style="text-align: center">234</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="链接">链接</h4>
+<p>链接的插入方式为<code class="highlighter-rouge">[文本说明](链接地址)</code>，示例如下：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>[Lilya的博客](http://blog.lilya.com.cn)
+</code></pre>
+</div>
+<p>最终显示如下：
+<a href="http://blog.lilya.com.cn">Lilya的博客</a></p>
+
+<h4 id="图片">图片</h4>
+<p>图片插入有两种方式，第一种方式类似链接，形如<code class="highlighter-rouge">![]()</code>，第二种方式则为通过<code class="highlighter-rouge">&lt;img&gt;</code>.示例如下：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>![favicon](/img/favicon.ico)
+</code></pre>
+</div>
+<p>最终显示如下：
+<img src="/img/favicon.ico" alt="favicon" /></p>
+
+<h4 id="引用">引用</h4>
+
+<p>引用比较简单，使用<code class="highlighter-rouge">&gt;</code>即可。
+引用示例如下：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;这是引用内容
+</code></pre>
+</div>
+<p>最终显示如下：</p>
+<blockquote>
+  <p>这是引用内容</p>
+</blockquote>
+
+<h4 id="强调">强调</h4>
+
+<p>两个<code class="highlighter-rouge">*</code>或<code class="highlighter-rouge">_</code>代表加粗，一个<code class="highlighter-rouge">*</code>或<code class="highlighter-rouge">_</code>代表斜体，<code class="highlighter-rouge">~~</code>代表删除。
+示例如下：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>**加粗** __加粗__，*斜体* _斜体_　，~~删除~~
+</code></pre>
+</div>
+<p>最终显示如下：</p>
+
+<p><strong>加粗</strong> <strong>加粗</strong>，<em>斜体</em> <em>斜体</em>，<del>删除</del></p>
+
+<h4 id="分割线">分割线</h4>
+<p>分割线使用多个<code class="highlighter-rouge">-</code>,示例如下：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>---
+</code></pre>
+</div>
+<p>最终显示如下：</p>
+
+<hr />
+
+<h3 id="相关链接">相关链接</h3>
+<ul>
+  <li>语法规则：<a href="http://www.appinn.com/markdown/#em">中文</a>，<a href="http://daringfireball.net/projects/markdown/syntax">英文</a></li>
+  <li>在线编辑：<a href="http://daringfireball.net/projects/markdown/dingus">赶紧在线试试看，编辑预览</a></li>
+</ul>
+
+
+                <hr style="visibility: hidden;">
+
+                <blockquote>
+                  <p>本文有参考其他作者的成果，若涉及版权，还请指正</p>
+                </blockquote>
+                <hr>
+                
+                
+
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/05/03/quickstar/" data-toggle="tooltip" data-placement="top" title="「jekyll」小白开工好难！">
+                        Next<br>
+                        <span>「jekyll」小白开工好难！</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+
+
+                
+
+                
+
+            </div>
+
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" style="font-size:18px;" href="#">目录</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="http://codeboy.me">小胖轩</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    <li>
+                        <a href="https://twitter.com/hexiaoli_moting">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    <!-- add Weibo, Zhihu by Lilya, add target = "_blank" to <a> by Lilya -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/lilywa">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/lilya">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/lilya">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Lilya Blog 2017
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/lilya-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script type="text/javascript">
+    if(navigator.serviceWorker){
+        // For security reasons, a service worker can only control the pages that are in the same directory level or below it. That's why we put sw.js at ROOT level.
+        navigator.serviceWorker
+            .register('/sw.js')
+            .then((registration) => {console.log('Service Worker Registered. ', registration)})
+            .catch((error) => {console.log('ServiceWorker registration failed: ', error)})
+    }
+</script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Lilyablog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async('/js/jquery.tagcloud.js',function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+<!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog (selector) {
+        var P = $('div.post-container'),a,n,t,l,i,c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#"+$(this).prop('id');
+            t = $(this).text();
+            c = $('<a style="font-size:18px;" href="'+i+'" rel="nofollow">'+t+'</a>');
+            l = $('<li class="'+n+'_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function(e){
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Lilya to support padding
+     */
+    async("/js/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+</body>
+
+</html>

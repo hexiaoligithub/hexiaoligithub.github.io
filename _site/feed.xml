@@ -1,13 +1,267 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000//" rel="alternate" type="text/html" /><updated>2017-02-21T15:35:48+08:00</updated><id>http://localhost:4000///</id><title type="html">lilya’s blog</title><subtitle></subtitle><entry><title type="html">jekyll实例</title><link href="http://localhost:4000//computer/all/2017/01/11/welcome-to-jekyll.html" rel="alternate" type="text/html" title="jekyll实例" /><published>2017-01-11T00:00:00+08:00</published><updated>2017-01-11T00:00:00+08:00</updated><id>http://localhost:4000//computer/all/2017/01/11/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000//computer/all/2017/01/11/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lilya Blog</title>
+    <description>多写多记，总归是好的</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 04 May 2017 18:26:11 +0800</pubDate>
+    <lastBuildDate>Thu, 04 May 2017 18:26:11 +0800</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>「jekyll」小白开工好难！</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;快速搭建参考&lt;a href=&quot;http://huangxuan.me/&quot;&gt;黄玄的博客&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Wed, 03 May 2017 20:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/05/03/quickstar/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/03/quickstar/</guid>
+        
+        <category>jekyll</category>
+        
+        <category>博客</category>
+        
+        <category>github</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Markdown 初探</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Learning any language takes a lot of time, but don’t give up. &lt;br /&gt;学习任何语言都是需要花费很多时间，但不要放弃。&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;h2 id=&quot;what&quot;&gt;What&lt;/h2&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#how&quot;&gt;直接使用markdown&lt;/a&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— &lt;a href=&quot;https://zh.wikipedia.org/wiki/Markdown&quot;&gt;维基百科&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><category term="update" /><category term="jekyll" /><summary type="html">_posts内文章示例</summary></entry><entry><title type="html">离开以前</title><link href="http://localhost:4000//diary/all/2017/01/11/beforeleave.html" rel="alternate" type="text/html" title="离开以前" /><published>2017-01-11T00:00:00+08:00</published><updated>2017-01-11T00:00:00+08:00</updated><id>http://localhost:4000//diary/all/2017/01/11/beforeleave</id><content type="html" xml:base="http://localhost:4000//diary/all/2017/01/11/beforeleave.html">&lt;h3 id=&quot;向前走向后走&quot;&gt;向前走,向后走&lt;/h3&gt;</content><summary type="html">一个一个路口,会带我去哪里呢?</summary></entry></feed>
+&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt; 是一种标记&lt;code class=&quot;highlighter-rouge&quot;&gt;语言&lt;/code&gt;，也可以说是一个文本编辑&lt;code class=&quot;highlighter-rouge&quot;&gt;工具&lt;/code&gt;。&lt;code class=&quot;highlighter-rouge&quot;&gt;语言&lt;/code&gt;方面类似 HTML 等其他编程语言，有自身的语法规则，轻量、简单、单易上手；说它是&lt;code class=&quot;highlighter-rouge&quot;&gt;工具&lt;/code&gt;，因为其类似　Word，支持文本排版及字体设置，可读、直观、纯文本。&lt;/p&gt;
+
+&lt;p&gt;不管是学习还是工作，一直在和软件打交道，平时爱写爱记，都放在自己硬盘上，作为程序猿，早该用 Markdown，却一直拖到现在。2016年以前，对于 Markdown，只闻其名，未见其身。实习期间有些文档需要编写，公司同一文档管理需要使用 Markdown，这才拨开迷雾，看了看它的真面目。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;why&quot;&gt;Why&lt;/h2&gt;
+
+&lt;p&gt;为何选用 Markdown ？理由无非两个，学习工作需要，或者是个人偏好。我要用它，原因是简单、好用、适用面广。何以见得？&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;语法简单，标记量少&lt;/strong&gt;&lt;br /&gt;
+Markdown 的语法十分简单，常用的标记符号也不超过十个，学习成本很低。一旦熟练，排版上可节省至少70%的时间，让你全身心投入码字。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;无缝切换，随意组合&lt;/strong&gt;&lt;br /&gt;
+Markdown 支持多种导出格式，你想发布网站，可以导出 HTML，你想修饰简历，可以导成 PDF 格式；另外 Markdown 中还可嵌入 HTML 标签。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;大家都用，迎合大众&lt;/strong&gt;&lt;br /&gt;
+“Learn once, write 很多 where”。目前来看，支持 Markdown 语法的编辑器及网站有很多，光是markdown编辑器就多达78款，详见&lt;a href=&quot;http://www.jianshu.com/p/5f414ddd79cf&quot;&gt;Markdown 工具&lt;/a&gt;，比如&lt;a href=&quot;https://maxiang.io/&quot;&gt;Evernote&lt;/a&gt;，&lt;a href=&quot;http://www.jianshu.com/&quot;&gt;简书&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p id=&quot;how&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;how&quot;&gt;How&lt;/h2&gt;
+&lt;p&gt;Markdown 语法很简单，标记也不是很多，想系统了解可以直接去&lt;a href=&quot;http://daringfireball.net/&quot;&gt;官网&lt;/a&gt;。这里只介绍常用标记的简单用法及示例。&lt;/p&gt;
+
+&lt;h4 id=&quot;标题&quot;&gt;标题&lt;/h4&gt;
+&lt;p&gt;标题是最常用的标记。类似 HTML 中的h1，h2，Markdown 中使用&lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt;来表示标题。示例如下：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 标题１
+## 标题２
+### 标题３
+#### 标题４
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;最终显示如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/postPic/title-markdown.jpg&quot; alt=&quot;标题示例&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;代码块&quot;&gt;代码块&lt;/h4&gt;
+&lt;p&gt;文本中添加代码，比如&lt;code class=&quot;highlighter-rouge&quot;&gt;`代码内容`&lt;/code&gt;，若是单独添加代码快，示例如下：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ``` java 开始
+  /**
+   * 注释
+   */
+  public class Main {
+      public static void main(String[] args) {
+        int val = 80;
+        ...   
+      }
+  }
+  ``` 结束
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;tips&lt;/strong&gt;:实际编写中删除&lt;code class=&quot;highlighter-rouge&quot;&gt;开始&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;结束&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;最终页面显示如下：&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/**
+ * 注释
+ */&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;    
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h4 id=&quot;列表&quot;&gt;列表&lt;/h4&gt;
+&lt;p&gt;在文字前添加&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;表示无序列表，使用&lt;code class=&quot;highlighter-rouge&quot;&gt;1. 2.&lt;/code&gt;则表示有序列表，注意符号要和文字之间加上一个字符的空格。&lt;br /&gt;
+无序列表&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;示例：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* red
+* green
+* black
+等同于
++ red
++ green
++ black
+等同于
+- red
+- green
+- black
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;最终显示如下：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;red&lt;/li&gt;
+  &lt;li&gt;green&lt;/li&gt;
+  &lt;li&gt;black&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;有序列表&lt;code class=&quot;highlighter-rouge&quot;&gt;1.&lt;/code&gt;示例：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. red
+2. green
+3. black
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;最终显示如下：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;red&lt;/li&gt;
+  &lt;li&gt;green&lt;/li&gt;
+  &lt;li&gt;black&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;表格&quot;&gt;表格&lt;/h4&gt;
+&lt;p&gt;表格示例如下：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+| Item      |    Value | Qty  |
+| :-------- | --------:| :--: |  
+| Computer  | 1600 USD |  5   |
+| Phone     |   12 USD |  12  |
+| Pipe      |    1 USD | 234  |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;tips&lt;/strong&gt;:&lt;br /&gt;1.第二行中的&lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt;表示对齐方式&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;居左：&lt;code class=&quot;highlighter-rouge&quot;&gt;:--------&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;居中：&lt;code class=&quot;highlighter-rouge&quot;&gt;:-------:&lt;/code&gt;或&lt;code class=&quot;highlighter-rouge&quot;&gt;--------&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;居右：&lt;code class=&quot;highlighter-rouge&quot;&gt;-------:&lt;/code&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2.使用表格时，上方需要有空行。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;最终显示如下：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Item&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Value&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Qty&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Computer&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;1600 USD&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Phone&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;12 USD&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;12&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Pipe&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;1 USD&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;234&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;链接&quot;&gt;链接&lt;/h4&gt;
+&lt;p&gt;链接的插入方式为&lt;code class=&quot;highlighter-rouge&quot;&gt;[文本说明](链接地址)&lt;/code&gt;，示例如下：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[Lilya的博客](http://blog.lilya.com.cn)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;最终显示如下：
+&lt;a href=&quot;http://blog.lilya.com.cn&quot;&gt;Lilya的博客&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;图片&quot;&gt;图片&lt;/h4&gt;
+&lt;p&gt;图片插入有两种方式，第一种方式类似链接，形如&lt;code class=&quot;highlighter-rouge&quot;&gt;![]()&lt;/code&gt;，第二种方式则为通过&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;img&amp;gt;&lt;/code&gt;.示例如下：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;![favicon](/img/favicon.ico)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;最终显示如下：
+&lt;img src=&quot;/img/favicon.ico&quot; alt=&quot;favicon&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;引用&quot;&gt;引用&lt;/h4&gt;
+
+&lt;p&gt;引用比较简单，使用&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;即可。
+引用示例如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;这是引用内容
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;最终显示如下：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;这是引用内容&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;强调&quot;&gt;强调&lt;/h4&gt;
+
+&lt;p&gt;两个&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;或&lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt;代表加粗，一个&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;或&lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt;代表斜体，&lt;code class=&quot;highlighter-rouge&quot;&gt;~~&lt;/code&gt;代表删除。
+示例如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**加粗** __加粗__，*斜体* _斜体_　，~~删除~~
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;最终显示如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;加粗&lt;/strong&gt; &lt;strong&gt;加粗&lt;/strong&gt;，&lt;em&gt;斜体&lt;/em&gt; &lt;em&gt;斜体&lt;/em&gt;，&lt;del&gt;删除&lt;/del&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;分割线&quot;&gt;分割线&lt;/h4&gt;
+&lt;p&gt;分割线使用多个&lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;,示例如下：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;最终显示如下：&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;相关链接&quot;&gt;相关链接&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;语法规则：&lt;a href=&quot;http://www.appinn.com/markdown/#em&quot;&gt;中文&lt;/a&gt;，&lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;英文&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;在线编辑：&lt;a href=&quot;http://daringfireball.net/projects/markdown/dingus&quot;&gt;赶紧在线试试看，编辑预览&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 02 May 2017 20:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/05/02/markdown/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/02/markdown/</guid>
+        
+        <category>markdown</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

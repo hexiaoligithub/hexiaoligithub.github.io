@@ -1,0 +1,78 @@
+---
+layout: default
+title: "关于"
+description: "我是Lilya，也可以叫我墨葶"
+header-img: "img/about-bg.jpg"
+---
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" id="tag-heading">
+                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <span class="subheading">{{ page.description }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="container">
+  <div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <ul class="cbp_tmtimeline">
+        <li>
+          <div class="cbp_tmlabel">
+            <h2 id="boxoffice">天猫实习</h2>
+            <time>2016.06</time>
+            <img src="/img/about/tmall.jpg">
+            <p>天猫Android客户端开发实习，于阿里巴巴西溪园区实习近半年，从白痴到小白，从小白到菜鸟，感谢所有热心的小伙伴，实习收获超级多。</p>
+          </div>
+        </li>
+        <li>
+          <div class="cbp_tmlabel">
+            <h2 id="boxoffice">北京大学</h2>
+            <time>2015.09</time>
+            <img src="/img/about/peking.jpg">
+            <p>从空气清爽转战到雾霾重重，保研到北京大学的软件与微电子学院，于计算机专业获取硕士学位。</p>
+          </div>
+        </li>
+        <li>
+          <div class="cbp_tmlabel">
+            <h2 id="boxoffice">厦门大学</h2>
+            <time>2011.09</time>
+            <img src="/img/about/xiada.jpg">
+            <p>从群山环绕到面朝大海，本科毕业于厦门大学软件学院，专业为软件工程。学校确实漂亮，可惜离开了才明白。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% if site.disqus_username %}
+<!-- disqus 评论框 start -->
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread">
+
+    </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "{{site.disqus_username}}";
+    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
+    var disqus_url = "{{site.url}}{{page.url}}";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+{% endif %}

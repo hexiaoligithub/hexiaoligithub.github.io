@@ -1,0 +1,192 @@
+---
+layout:     post
+title:      "Markdown 初探"
+subtitle:   " \"Markdown Get,都说好用，我也试试\""
+date:       2017-05-02 12:00:00
+author:     "Lilya"
+header-img: "img/postPic/learn-bg.jpg"
+catalog: true
+tags:
+    - markdown
+---
+
+> Learning any language takes a lot of time, but don't give up. <br>学习任何语言都是需要花费很多时间，但不要放弃。
+
+## What
+
+[直接使用markdown](#how)
+
+> Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— [维基百科](https://zh.wikipedia.org/wiki/Markdown)
+
+**Markdown** 是一种标记`语言`，也可以说是一个文本编辑`工具`。`语言`方面类似 HTML 等其他编程语言，有自身的语法规则，轻量、简单、单易上手；说它是`工具`，因为其类似　Word，支持文本排版及字体设置，可读、直观、纯文本。
+
+不管是学习还是工作，一直在和软件打交道，平时爱写爱记，都放在自己硬盘上，作为程序猿，早该用 Markdown，却一直拖到现在。2016年以前，对于 Markdown，只闻其名，未见其身。实习期间有些文档需要编写，公司同一文档管理需要使用 Markdown，这才拨开迷雾，看了看它的真面目。
+
+---
+
+## Why
+
+为何选用 Markdown ？理由无非两个，学习工作需要，或者是个人偏好。我要用它，原因是简单、好用、适用面广。何以见得？
+
+* **语法简单，标记量少**<br>
+  Markdown 的语法十分简单，常用的标记符号也不超过十个，学习成本很低。一旦熟练，排版上可节省至少70%的时间，让你全身心投入码字。
+* **无缝切换，随意组合**<br>
+  Markdown 支持多种导出格式，你想发布网站，可以导出 HTML，你想修饰简历，可以导成 PDF 格式；另外 Markdown 中还可嵌入 HTML 标签。
+* **大家都用，迎合大众**<br>
+  "Learn once, write 很多 where"。目前来看，支持 Markdown 语法的编辑器及网站有很多，光是markdown编辑器就多达78款，详见[Markdown 工具](http://www.jianshu.com/p/5f414ddd79cf)，比如[Evernote](https://maxiang.io/)，[简书](http://www.jianshu.com/)。
+
+---
+
+<p id = "how"></p>
+## How
+Markdown 语法很简单，标记也不是很多，想系统了解可以直接去[官网](http://daringfireball.net/)。这里只介绍常用标记的简单用法及示例。
+
+#### 标题
+标题是最常用的标记。类似 HTML 中的h1，h2，Markdown 中使用`#`来表示标题。示例如下：
+```
+# 标题１
+## 标题２
+### 标题３
+#### 标题４
+```
+最终显示如下：
+{{ site.baseUrl }}
+![标题示例]({{ site.baseUrl }}/img/postPic/title-markdown.jpg )
+
+#### 代码块
+文本中添加代码，比如`` `代码内容` ``，若是单独添加代码快，示例如下：
+```
+  ``` java 开始
+  /**
+   * 注释
+   */
+  public class Main {
+      public static void main(String[] args) {
+        int val = 80;
+        ...   
+      }
+  }
+  ``` 结束
+```
+> **tips**:实际编写中删除`开始`和`结束`
+
+最终页面显示如下：
+``` java
+/**
+ * 注释
+ */
+public class Main {
+    public static void main(String[] args) {
+      int val = 80;
+      ...    
+    }
+}
+```
+#### 列表
+在文字前添加`*`,`+`和`-`表示无序列表，使用`1. 2.`则表示有序列表，注意符号要和文字之间加上一个字符的空格。<br>
+无序列表`*`示例：
+```
+* red
+* green
+* black
+等同于
++ red
++ green
++ black
+等同于
+- red
+- green
+- black
+```
+最终显示如下：
+* red
+* green
+* black
+
+有序列表`1.`示例：
+```
+1. red
+2. green
+3. black
+```
+最终显示如下：
+1. red
+2. green
+3. black
+
+#### 表格
+表格示例如下：
+```
+
+| Item      |    Value | Qty  |
+| :-------- | --------:| :--: |  
+| Computer  | 1600 USD |  5   |
+| Phone     |   12 USD |  12  |
+| Pipe      |    1 USD | 234  |
+```
+>**tips**:<br>1.第二行中的`:`表示对齐方式
+* 居左：`:--------`
+* 居中：`:-------:`或`--------`
+* 居右：`-------:`
+
+>2.使用表格时，上方需要有空行。
+
+最终显示如下：
+
+| Item      |    Value | Qty  |
+| :-------- | --------:| :--: |
+| Computer  | 1600 USD |  5   |
+| Phone     |   12 USD |  12  |
+| Pipe      |    1 USD | 234  |
+
+#### 链接
+链接的插入方式为`[文本说明](链接地址)`，示例如下：
+```
+[Lilya的博客](http://blog.lilya.com.cn)
+```
+最终显示如下：
+[Lilya的博客](http://blog.lilya.com.cn)
+
+#### 图片
+图片插入有两种方式，第一种方式类似链接，形如`![]()`，第二种方式则为通过`<img>`.示例如下：
+```
+![favicon]({{ site.baseUrl }}/img/favicon.ico)
+```
+最终显示如下：
+![favicon]({{ site.baseUrl }}/img/favicon.ico)
+
+#### 引用
+
+引用比较简单，使用`>`即可。
+引用示例如下：
+
+```
+>这是引用内容
+```
+最终显示如下：
+>这是引用内容
+
+#### 强调
+
+两个`*`或`_`代表加粗，一个`*`或`_`代表斜体，`~~`代表删除。
+示例如下：
+
+```
+**加粗** __加粗__，*斜体* _斜体_　，~~删除~~
+```
+最终显示如下：
+
+**加粗** __加粗__，*斜体* _斜体_，~~删除~~
+
+#### 分割线
+分割线使用多个`-`,示例如下：
+```
+---
+```
+最终显示如下：
+
+------
+
+### 相关链接
+- 语法规则：[中文](http://www.appinn.com/markdown/#em)，[英文](http://daringfireball.net/projects/markdown/syntax)
+- 在线编辑：[赶紧在线试试看，编辑预览](http://daringfireball.net/projects/markdown/dingus)
