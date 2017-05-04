@@ -7,7 +7,6 @@ author:     "Lilya"
 header-img: "img/post-bg-alibaba.jpg"
 tags:
     - jekyll
-    - 博客
     - github
 ---
 
