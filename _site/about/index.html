@@ -229,7 +229,7 @@
                     
                     
                     <li>
-                        <a target="_blank" href="https://github.com/lilya">
+                        <a target="_blank" href="https://github.com/hexiaoligithub">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -336,6 +336,42 @@
 
 <!-- Side Catalog -->
 
+
+    
+    <div class="block-bar" id="updown" style="display:none;">
+  <div class="up" >
+    <img src="/img/up-out.png" id="up-btn" title="置顶" onMouseOver="this.src='/img/up-in.png'" onMouseOut="this.src='/img/up-out.png'"/>
+  </div>
+  <div class="down" >
+    <img src="/img/down-out.png" id="up-btn" title="置底" onMouseOver="this.src='/img/down-in.png'" onMouseOut="this.src='/img/down-out.png'"/>
+  </div>
+</div>
+
+<style type="text/css">
+  .block-bar{
+    bottom: 20px;
+    right: 16px;
+    position: fixed;
+  }
+  .block-bar img{
+    width: 40px;
+    margin-bottom: 5px;
+  }
+</style>
+
+<script>
+  $(function(){
+      $(window).scroll(function() {
+          if($(window).scrollTop() >= 200){
+              $('#updown').fadeIn(300);
+          }else{
+              $('#updown').fadeOut(300);
+          }
+      });
+      $('#updown .up').click(function(){$('html,body').animate({scrollTop: '0px'}, 800);});
+      $('#updown .down').click(function(){$('html,body').animate({scrollTop: document.body.clientHeight+'px'}, 800);});
+  });
+</script>
 
 
 </body>

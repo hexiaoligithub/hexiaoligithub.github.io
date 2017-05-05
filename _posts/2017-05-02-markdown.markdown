@@ -143,10 +143,10 @@ public class Main {
 #### 链接
 链接的插入方式为`[文本说明](链接地址)`，示例如下：
 ```
-[Lilya的博客](http://blog.lilya.com.cn)
+[Lilya的博客](http://lilya.com.cn)
 ```
 最终显示如下：
-[Lilya的博客](http://blog.lilya.com.cn)
+[Lilya的博客](http://lilya.com.cn)
 
 #### 图片
 图片插入有两种方式，第一种方式类似链接，形如`![]()`，第二种方式则为通过`<img>`.示例如下：

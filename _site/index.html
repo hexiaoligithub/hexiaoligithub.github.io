@@ -189,40 +189,17 @@
   </div>
   <hr>
   
-  <div class="post-preview">
-      <a href="/2017/05/02/markdown/">
-          <h2 class="post-title">
-              Markdown 初探
-          </h2>
-          
-          <h3 class="post-subtitle">
-               "Markdown Get,都说好用，我也试试"
-          </h3>
-          
-          <div class="post-content-preview">
-              
-  Learning any language takes a lot of time, but don’t give up. 学习任何语言都是需要花费很多时间，但不要放弃。
-
-
-What
-
-直接使用markdown
-
-
-  Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— 维基百科
-
-
-Markdown 是...
-          </div>
-      </a>
-      <p class="post-meta">
-          Posted by Lilya on May 2, 2017
-      </p>
-  </div>
-  <hr>
-  
 
   <!-- Pager -->
+  
+  <ul class="pager">
+      
+      
+      <li class="next">
+          <a href="/page2">Older Posts &rarr;</a>
+      </li>
+      
+  </ul>
   
 
     		</div>
@@ -244,7 +221,9 @@ Markdown 是...
                             
                         
                             
-                        
+                                <a href="/tags/#jekyll" title="jekyll" rel="2">
+                                    jekyll
+                                </a>
                             
                         
                             
@@ -323,7 +302,7 @@ Markdown 是...
                     
                     
                     <li>
-                        <a target="_blank" href="https://github.com/lilya">
+                        <a target="_blank" href="https://github.com/hexiaoligithub">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -430,6 +409,42 @@ Markdown 是...
 
 <!-- Side Catalog -->
 
+
+    
+    <div class="block-bar" id="updown" style="display:none;">
+  <div class="up" >
+    <img src="/img/up-out.png" id="up-btn" title="置顶" onMouseOver="this.src='/img/up-in.png'" onMouseOut="this.src='/img/up-out.png'"/>
+  </div>
+  <div class="down" >
+    <img src="/img/down-out.png" id="up-btn" title="置底" onMouseOver="this.src='/img/down-in.png'" onMouseOut="this.src='/img/down-out.png'"/>
+  </div>
+</div>
+
+<style type="text/css">
+  .block-bar{
+    bottom: 20px;
+    right: 16px;
+    position: fixed;
+  }
+  .block-bar img{
+    width: 40px;
+    margin-bottom: 5px;
+  }
+</style>
+
+<script>
+  $(function(){
+      $(window).scroll(function() {
+          if($(window).scrollTop() >= 200){
+              $('#updown').fadeIn(300);
+          }else{
+              $('#updown').fadeOut(300);
+          }
+      });
+      $('#updown .up').click(function(){$('html,body').animate({scrollTop: '0px'}, 800);});
+      $('#updown .down').click(function(){$('html,body').animate({scrollTop: document.body.clientHeight+'px'}, 800);});
+  });
+</script>
 
 
 </body>

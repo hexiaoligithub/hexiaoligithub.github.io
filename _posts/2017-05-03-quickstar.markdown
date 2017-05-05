@@ -4,7 +4,7 @@ title:      "「jekyll」小白开工好难！"
 subtitle:   "第一次难免遇到很多简单却不知道方案的小问题"
 date:       2017-05-03 12:00:00
 author:     "Lilya"
-header-img: "img/post-bg-alibaba.jpg"
+header-img: "img/postPic/jekyll-bg.jpg"
 tags:
     - jekyll
     - github

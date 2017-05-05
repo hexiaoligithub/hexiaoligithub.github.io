@@ -159,6 +159,8 @@
                         
                         <a class="tag" href="/tags/#markdown" title="markdown">markdown</a>
                         
+                        <a class="tag" href="/tags/#jekyll" title="jekyll">jekyll</a>
+                        
                     </div>
                     <h1>Markdown 初探</h1>
                     
@@ -353,11 +355,11 @@ Markdown 支持多种导出格式，你想发布网站，可以导出 HTML，你
 
 <h4 id="链接">链接</h4>
 <p>链接的插入方式为<code class="highlighter-rouge">[文本说明](链接地址)</code>，示例如下：</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>[Lilya的博客](http://blog.lilya.com.cn)
+<div class="highlighter-rouge"><pre class="highlight"><code>[Lilya的博客](http://lilya.com.cn)
 </code></pre>
 </div>
 <p>最终显示如下：
-<a href="http://blog.lilya.com.cn">Lilya的博客</a></p>
+<a href="http://lilya.com.cn">Lilya的博客</a></p>
 
 <h4 id="图片">图片</h4>
 <p>图片插入有两种方式，第一种方式类似链接，形如<code class="highlighter-rouge">![]()</code>，第二种方式则为通过<code class="highlighter-rouge">&lt;img&gt;</code>.示例如下：</p>
@@ -414,7 +416,7 @@ Markdown 支持多种导出格式，你想发布网站，可以导出 HTML，你
                   <p>本文有参考其他作者的成果，若涉及版权，还请指正</p>
                 </blockquote>
                 <hr>
-                
+
                 
 
 
@@ -470,7 +472,9 @@ Markdown 支持多种导出格式，你想发布网站，可以导出 HTML，你
                             
         				
                             
-        				
+                				<a href="/tags/#jekyll" title="jekyll" rel="2">
+                                    jekyll
+                                </a>
                             
         				
                             
@@ -498,43 +502,6 @@ Markdown 支持多种导出格式，你想发布网站，可以导出 HTML，你
 
 
 
-
-
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script>
-    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
-        anchors.options = {
-          visible: 'always',
-          placement: 'right',
-          icon: '#'
-        };
-        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-    })
-</script>
-<style>
-    /* place left on bigger screen */
-    @media all and (min-width: 800px) {
-        .anchorjs-link{
-            position: absolute;
-            left: -0.75em;
-            font-size: 1.1em;
-            margin-top : -0.1em;
-        }
-    }
-</style>
 
 
 
@@ -580,7 +547,7 @@ Markdown 支持多种导出格式，你想发布网站，可以导出 HTML，你
                     
                     
                     <li>
-                        <a target="_blank" href="https://github.com/lilya">
+                        <a target="_blank" href="https://github.com/hexiaoligithub">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -731,6 +698,42 @@ Markdown 支持多种导出格式，你想发布网站，可以导出 HTML，你
     });
 </script>
 
+
+    
+    <div class="block-bar" id="updown" style="display:none;">
+  <div class="up" >
+    <img src="/img/up-out.png" id="up-btn" title="置顶" onMouseOver="this.src='/img/up-in.png'" onMouseOut="this.src='/img/up-out.png'"/>
+  </div>
+  <div class="down" >
+    <img src="/img/down-out.png" id="up-btn" title="置底" onMouseOver="this.src='/img/down-in.png'" onMouseOut="this.src='/img/down-out.png'"/>
+  </div>
+</div>
+
+<style type="text/css">
+  .block-bar{
+    bottom: 20px;
+    right: 16px;
+    position: fixed;
+  }
+  .block-bar img{
+    width: 40px;
+    margin-bottom: 5px;
+  }
+</style>
+
+<script>
+  $(function(){
+      $(window).scroll(function() {
+          if($(window).scrollTop() >= 200){
+              $('#updown').fadeIn(300);
+          }else{
+              $('#updown').fadeOut(300);
+          }
+      });
+      $('#updown .up').click(function(){$('html,body').animate({scrollTop: '0px'}, 800);});
+      $('#updown .down').click(function(){$('html,body').animate({scrollTop: document.body.clientHeight+'px'}, 800);});
+  });
+</script>
 
 
 </body>

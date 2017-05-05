@@ -159,9 +159,7 @@
 				
 				<a href="#markdown" title="markdown" rel="1">markdown</a>
 				
-				<a href="#jekyll" title="jekyll" rel="1">jekyll</a>
-				
-				<a href="#博客" title="博客" rel="1">博客</a>
+				<a href="#jekyll" title="jekyll" rel="2">jekyll</a>
 				
 				<a href="#github" title="github" rel="1">github</a>
 				
@@ -218,29 +216,22 @@
 				</div>
 				<hr>
 				
-			</div>
-			
-			<div class="one-tag-list">
-			  	<span class="fa fa-tag listing-seperator" id="博客">
-                    <span class="tag-text">博客</span>
-                </span>
-				
 				  <!-- <li class="listing-item">
-				  <time datetime="2017-05-03">2017-05-03</time>
-				  <a href="/2017/05/03/quickstar/" title="「jekyll」小白开工好难！">「jekyll」小白开工好难！</a>
+				  <time datetime="2017-05-02">2017-05-02</time>
+				  <a href="/2017/05/02/markdown/" title="Markdown 初探">Markdown 初探</a>
 				  </li> -->
 				 <div class="post-preview">
-				    <a href="/2017/05/03/quickstar/">
+				    <a href="/2017/05/02/markdown/">
 				        <h2 class="post-title">
-                            「jekyll」小白开工好难！
+                            Markdown 初探
 				        </h2>
 				        
 				        <h3 class="post-subtitle">
-				            第一次难免遇到很多简单却不知道方案的小问题
+				             "Markdown Get,都说好用，我也试试"
 				        </h3>
 				        
 				    </a>
-				    <!-- <p class="post-meta">2017-05-03</p> -->
+				    <!-- <p class="post-meta">2017-05-02</p> -->
 				</div>
 				<hr>
 				
@@ -320,7 +311,7 @@
                     
                     
                     <li>
-                        <a target="_blank" href="https://github.com/lilya">
+                        <a target="_blank" href="https://github.com/hexiaoligithub">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -427,6 +418,42 @@
 
 <!-- Side Catalog -->
 
+
+    
+    <div class="block-bar" id="updown" style="display:none;">
+  <div class="up" >
+    <img src="/img/up-out.png" id="up-btn" title="置顶" onMouseOver="this.src='/img/up-in.png'" onMouseOut="this.src='/img/up-out.png'"/>
+  </div>
+  <div class="down" >
+    <img src="/img/down-out.png" id="up-btn" title="置底" onMouseOver="this.src='/img/down-in.png'" onMouseOut="this.src='/img/down-out.png'"/>
+  </div>
+</div>
+
+<style type="text/css">
+  .block-bar{
+    bottom: 20px;
+    right: 16px;
+    position: fixed;
+  }
+  .block-bar img{
+    width: 40px;
+    margin-bottom: 5px;
+  }
+</style>
+
+<script>
+  $(function(){
+      $(window).scroll(function() {
+          if($(window).scrollTop() >= 200){
+              $('#updown').fadeIn(300);
+          }else{
+              $('#updown').fadeOut(300);
+          }
+      });
+      $('#updown .up').click(function(){$('html,body').animate({scrollTop: '0px'}, 800);});
+      $('#updown .down').click(function(){$('html,body').animate({scrollTop: document.body.clientHeight+'px'}, 800);});
+  });
+</script>
 
 
 </body>
