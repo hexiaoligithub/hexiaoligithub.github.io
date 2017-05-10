@@ -5,9 +5,45 @@
     <description>多写多记，总归是好的</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 07 May 2017 12:54:09 +0800</pubDate>
-    <lastBuildDate>Sun, 07 May 2017 12:54:09 +0800</lastBuildDate>
+    <pubDate>Wed, 10 May 2017 09:24:05 +0800</pubDate>
+    <lastBuildDate>Wed, 10 May 2017 09:24:05 +0800</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>明朝天子那些事儿</title>
+        <description>&lt;h2 id=&quot;综述&quot;&gt;综述&lt;/h2&gt;
+
+&lt;h2 id=&quot;明朝天子&quot;&gt;明朝天子&lt;/h2&gt;
+&lt;h4 id=&quot;朱元璋&quot;&gt;朱元璋&lt;/h4&gt;
+&lt;h4 id=&quot;朱允文&quot;&gt;朱允文&lt;/h4&gt;
+&lt;h4 id=&quot;朱棣&quot;&gt;朱棣&lt;/h4&gt;
+&lt;h4 id=&quot;朱高炽&quot;&gt;朱高炽&lt;/h4&gt;
+&lt;h4 id=&quot;朱瞻基&quot;&gt;朱瞻基&lt;/h4&gt;
+&lt;h4 id=&quot;朱祁镇&quot;&gt;朱祁镇&lt;/h4&gt;
+&lt;h4 id=&quot;朱祁钰&quot;&gt;朱祁钰&lt;/h4&gt;
+&lt;h4 id=&quot;朱见深&quot;&gt;朱见深&lt;/h4&gt;
+&lt;h4 id=&quot;朱佑樘&quot;&gt;朱佑樘&lt;/h4&gt;
+&lt;h4 id=&quot;朱厚照&quot;&gt;朱厚照&lt;/h4&gt;
+&lt;h4 id=&quot;朱厚熜&quot;&gt;朱厚熜&lt;/h4&gt;
+&lt;h4 id=&quot;朱高炽-1&quot;&gt;朱高炽&lt;/h4&gt;
+&lt;h4 id=&quot;朱载垕&quot;&gt;朱载垕&lt;/h4&gt;
+&lt;h4 id=&quot;朱翊钧&quot;&gt;朱翊钧&lt;/h4&gt;
+&lt;h4 id=&quot;朱常洛&quot;&gt;朱常洛&lt;/h4&gt;
+&lt;h4 id=&quot;朱由校&quot;&gt;朱由校&lt;/h4&gt;
+&lt;h4 id=&quot;朱由检&quot;&gt;朱由检&lt;/h4&gt;
+
+&lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;
+</description>
+        <pubDate>Sat, 06 May 2017 20:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/05/06/literature-ming-emperors/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/06/literature-ming-emperors/</guid>
+        
+        <category>文学</category>
+        
+        <category>明朝那些事儿</category>
+        
+        
+      </item>
     
       <item>
         <title>「jekyll」小白开工好难！</title>
