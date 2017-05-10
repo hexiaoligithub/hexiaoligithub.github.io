@@ -5,8 +5,8 @@
     <description>多写多记，总归是好的</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 05 May 2017 13:32:00 +0800</pubDate>
-    <lastBuildDate>Fri, 05 May 2017 13:32:00 +0800</lastBuildDate>
+    <pubDate>Sun, 07 May 2017 12:54:09 +0800</pubDate>
+    <lastBuildDate>Sun, 07 May 2017 12:54:09 +0800</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -14,6 +14,17 @@
         <description>&lt;blockquote&gt;
   &lt;p&gt;快速搭建参考&lt;a href=&quot;http://huangxuan.me/&quot;&gt;黄玄的博客&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;h2 id=&quot;jekyll-环境安装&quot;&gt;jekyll 环境安装&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;博客创建&quot;&gt;博客创建&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;github发布&quot;&gt;github发布&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;问题及解决方案&quot;&gt;问题及解决方案&lt;/h2&gt;
 </description>
         <pubDate>Wed, 03 May 2017 20:00:00 +0800</pubDate>
         <link>http://localhost:4000/2017/05/03/quickstar/</link>
