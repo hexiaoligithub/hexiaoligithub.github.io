@@ -158,13 +158,14 @@ h6 {
      *     TypeIsBeautiful,
      *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
      */
+  font-size: 20px;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   line-height: 1.1;
   font-weight: bold;
 }
 h4 {
-  font-size: 21px;
+  font-size: 18px;
 }
 a {
   color: #404040;
@@ -416,7 +417,7 @@ pre code {
 }
 .navbar-custom .nav li a {
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 20px;
   font-weight: 800;
   letter-spacing: 1px;
