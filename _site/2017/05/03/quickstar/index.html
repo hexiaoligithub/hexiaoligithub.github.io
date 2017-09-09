@@ -408,7 +408,7 @@ input: GFM
   </li>
 </ul>
 
-<p><strong>3. 问题</strong></p>
+<p><strong>4. 问题</strong></p>
 
 <p>执行 <code class="highlighter-rouge">jekyll serve</code> 后出现如下异常：</p>
 <blockquote>
@@ -431,6 +431,13 @@ Please report a bug if this causes problems.
   <li>方法一：使用命令 <code class="highlighter-rouge">bundle exec jekyll serve</code></li>
   <li>方法二：将 <code class="highlighter-rouge">Gemfile.lock</code> 文件中的 <code class="highlighter-rouge">addressable 2.5.0</code> 改为 <code class="highlighter-rouge">addressable 2.5.1</code></li>
 </ul>
+
+<p><strong>5. 问题</strong></p>
+
+<p>在 _posts 中新增 markdown 文件后，没有自动在 _site 生成相应的 html 文件</p>
+
+<p><strong>解决方案</strong>
+在 jekyll serve 命令后面追加 <code class="highlighter-rouge">--incremental</code></p>
 
 
                 <hr style="visibility: hidden;">
@@ -502,15 +509,13 @@ Please report a bug if this causes problems.
                             
         				
                             
-                				<a href="/tags/#jekyll" title="jekyll" rel="2">
-                                    jekyll
+        				
+                            
+        				
+                            
+                				<a href="/tags/#文学" title="文学" rel="2">
+                                    文学
                                 </a>
-                            
-        				
-                            
-        				
-                            
-        				
                             
         				
         			</div>

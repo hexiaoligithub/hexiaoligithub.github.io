@@ -8,7 +8,6 @@ header-img: "img/postPic/learn-bg.jpg"
 catalog: true
 tags:
     - markdown
-    - jekyll
 ---
 
 > Learning any language takes a lot of time, but don't give up. <br>学习任何语言都是需要花费很多时间，但不要放弃。

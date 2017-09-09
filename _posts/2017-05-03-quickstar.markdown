@@ -181,7 +181,7 @@ kramdown:
   input: GFM               
 ```
 
-**3. 问题**
+**4. 问题**
 
 执行 `jekyll serve` 后出现如下异常：
 >WARN: Unresolved specs during Gem::Specification.reset:
@@ -200,3 +200,10 @@ Please report a bug if this causes problems.
 **解决方案**:
 * 方法一：使用命令 `bundle exec jekyll serve`
 * 方法二：将 `Gemfile.lock` 文件中的 `addressable 2.5.0` 改为 `addressable 2.5.1`
+
+**5. 问题**
+
+在 _posts 中新增 markdown 文件后，没有自动在 _site 生成相应的 html 文件
+
+**解决方案**
+在 jekyll serve 命令后面追加 ``--incremental``
