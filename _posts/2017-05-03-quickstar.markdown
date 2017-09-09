@@ -16,7 +16,7 @@ tags:
 想搭建 blog ，又不想花钱买服务器，[jekyll](http://jekyll.com.cn) 还是一个不错的选择。只要有github账户，就能完全免费发布自己的 blog ，还可以[自定义域名](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/)。下面介绍 [Lilya blog](http://lilya.com.cn/) 的搭建过程，以及搭建过程中遇到的问题。
 
 ## 事前准备
-jekyll 官方文档不建议在 Windows 平台上安装 Jekyll ,以下介绍都是基于 ubantu 完成的，Windows 用户可参照[文档](http://www.madhur.co.in/blog/2011/09/01/runningjekyllwindows.html)。
+jekyll 官方文档不建议在 Windows 平台上安装 Jekyll ,以下介绍都是基于 Ubuntu 完成的，Windows 用户可参照[文档](http://www.madhur.co.in/blog/2011/09/01/runningjekyllwindows.html)。
 
 **1. Ruby 安装**
 ```
