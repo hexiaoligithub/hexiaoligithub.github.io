@@ -29,7 +29,7 @@ xcrun simctl install booted /path/xxx.app
 ```
 xcrun simctl launch [-w | --wait-for-debugger] [--console] [--stdout=<path>] [--stderr=<path>] <device> <app identifier> [<argv 1> <argv 2> ... <argv n>]xcrun simctl launch <device> <app identifier>
 ```
-天猫常用的是命令：``xcrun simctl launch booted com.taobao.tmall.rc2``
+常用的是命令：``xcrun simctl launch booted com.xxx.xxx``
 >tips:在Finder中找到xxx.app中，点击``显示包内容``，找到``Info.plist``文件，双击进入，可查看基本信息，比如版本号、Bundle identifier
 
 
